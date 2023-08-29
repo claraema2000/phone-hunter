@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunting Phone Api</title>
+    <!-- Tailwind & DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Tailwind Custom Classes -->
+        <!-- <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    'primary-color': '#0D6EFD',
+                  }
+                }
+              }
+            }
+        </script> -->
+        <style>
+            .cmn-btn{
+                color: white;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                border-radius: 8px;
+                background: #0D6EFD;
+                padding: 8px 20px;
+            }
+        </style>
 </head>
 <body>
-    <header>
+    <header class="bg-sky-100 pb-24">
+        <nav>
+            <div class="flex justify-between ml-24 mr-24 pt-10">
+                <h3 class="text-3xl font-bold">Hot Gadgets</h3>
+                <button class="cmn-btn">Sign Up</button>
+            </div>
+        </nav>
+        <section class="text-center space-y-10 mt-14">
+            <h1 class="text-5xl font-black">Apple Iphone 13 Pro Max</h1>
+            <p class="text-slate-500">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration in some form, by injected humou.</p>
+            <button class="cmn-btn">Buy Now</button>
+        </section>
     </header>
-    <main>
-        
+    <main class="mx-auto">
+        <section class="text-center">
+            <h2 class="mt-28 text-5xl font-semibold mb-5">Search your phone</h2>
+            <input id="search-field" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs bg-gray-100" /><button onclick="handleSearch()" class="cmn-btn">Search</button>
+        </section>
+        <section class="mt-20">
+            <div id="phn-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="js/phone.js"></script>
