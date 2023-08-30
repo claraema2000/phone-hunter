@@ -7,18 +7,7 @@
     <!-- Tailwind & DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Tailwind Custom Classes -->
-        <!-- <script>
-            tailwind.config = {
-              theme: {
-                extend: {
-                  colors: {
-                    'primary-color': '#0D6EFD',
-                  }
-                }
-              }
-            }
-        </script> -->
+        <!-- Custom Class -->
         <style>
             .cmn-btn{
                 color: white;
@@ -32,7 +21,7 @@
         </style>
 </head>
 <body>
-    <header class="bg-sky-100 pb-24">
+    <!-- <header class="bg-sky-100 pb-24">
         <nav>
             <div class="flex justify-between ml-24 mr-24 pt-10">
                 <h3 class="text-3xl font-bold">Hot Gadgets</h3>
@@ -44,7 +33,7 @@
             <p class="text-slate-500">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration in some form, by injected humou.</p>
             <button class="cmn-btn">Buy Now</button>
         </section>
-    </header>
+    </header> -->
     <main class="mx-16">
         <section class="text-center">
             <h2 class="mt-28 text-5xl font-semibold mb-5">Search your phone</h2>
@@ -52,6 +41,11 @@
         </section>
         <!-- Search result -->
         <section class="mt-20">
+        <!-- Spinner/Loader -->            
+            <div id="spinner" class="text-center hidden">
+                <span class="loading loading-infinity loading-lg text-[#0D6EFD]"></span>
+
+            </div>
             <div id="phn-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             </div>
             <!-- Show all button -->
