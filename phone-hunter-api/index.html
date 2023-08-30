@@ -45,13 +45,18 @@
             <button class="cmn-btn">Buy Now</button>
         </section>
     </header>
-    <main class="mx-auto">
+    <main class="mx-16">
         <section class="text-center">
             <h2 class="mt-28 text-5xl font-semibold mb-5">Search your phone</h2>
             <input id="search-field" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs bg-gray-100" /><button onclick="handleSearch()" class="cmn-btn">Search</button>
         </section>
+        <!-- Search result -->
         <section class="mt-20">
             <div id="phn-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            </div>
+            <!-- Show all button -->
+            <div id="show-all-container" class="hidden text-right mt-8">
+                <button onclick="()" class="cmn-btn">Show All</button>
             </div>
         </section>
     </main>

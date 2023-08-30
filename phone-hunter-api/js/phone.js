@@ -7,16 +7,32 @@ const loadphn = async (searchText) => {
 }
 const displayPhn = phones => {
     // console.log(phones);
+
     //1.get the id
     const phoneContainer = document.getElementById('phn-container');
+
     //clear phone container cards before adding new cards
     phoneContainer.textContent = "";
+
+    //condition (display show all button id there is more than 12 phones)
+    const showAllContainer = document.getElementById('show-all-container')
+    if(phones.length > 12){
+        showAllContainer.classList.remove('hidden');
+    }
+    else{
+        showAllContainer.classList.add('hidden');
+    }
+    //display only first 12 phones
+    phones = phones.slice(0, 12);
+
     //forEach loop
     phones.forEach(phone => {
-        console.log(phone)
+        // console.log(phone)
+
         //2. create a div
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-base-100 shadow-xl`;
+
         //3. set innerHTML
         phoneCard.innerHTML = `
         <figure class="px-7 pt-7">
