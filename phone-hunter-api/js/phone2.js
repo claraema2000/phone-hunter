@@ -65,25 +65,36 @@ const handleShowDetails = async (id) => {
     showPhoneDetails(detail);
 }
 const showPhoneDetails = (info) => {
-    console.log(info);
-    const modalDetailContainer = document.getElementById('modal-detail-container');
-    modalDetailContainer.innerHTML = `
-    <figure class="px-36">
-    <img src="${info.image}" alt="Mobile Phone" class="rounded-sm" />
-    </figure>
-    <h3 class="font-bold text-3xl">${info.name}</h3>
-    <p class="py-3 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Storage: </span>${info?.mainFeatures?.storage}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Display Size: </span>${info?.mainFeatures?.displaySize}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Chipset: </span>${info?.mainFeatures?.chipSet}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Memory: </span>${info?.mainFeatures?.memory}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Slug: </span>${info.slug}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Release Date: </span>${info.releaseDate}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">Brand: </span>${info.brand}</p>
-    <p class="text-gray-700"><span class="text-black font-bold">GPS: </span>${info.others?.GPS}</p>
-    `
     //show the modal
-    show_details_modal.showModal();
+    show_details_modal.showModal(); 
+    console.log(info);
+    // const modalContainer = document.getElementById('modal-container');
+    // const modal = document.createElement('div');
+    // modal.innerHTML =`
+    //         <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+    //             <form method="dialog" class="modal-box">
+    //                 <figure class="px-5 pt-5 text-center">
+    //                     <img src="${data.image}" alt="Mobile Phone" class="rounded-xl" />
+    //                 </figure>
+    //                 <h3 class="font-bold text-2xl">${data.name}</h3>
+    //                 <p class="py-3 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Storage: </span>${data.mainFeatures.storage}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Display Size: </span>${data.mainFeatures.displaySize}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Chipset: </span>${data.mainFeatures.chipSet}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Memory: </span>${data.mainFeatures.memory}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Slug: </span>${data.slug}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Release Date: </span>${data.releaseDate}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">Brand: </span>${data.brand}</p>
+    //                 <p class="text-gray-700"><span class="text-black font-bold">GPS: </span>${data.others.GPS}</p>
+    //                 <div class="modal-action">
+    //                     <button class="btn bg-red-500 text-white font-semibold">Close</button>
+    //                 </div>
+    //             </form>
+    //         </dialog>
+    // `;
+    // modalContainer.appendChild(modal);
+
+
 }
 
 //handle search button
